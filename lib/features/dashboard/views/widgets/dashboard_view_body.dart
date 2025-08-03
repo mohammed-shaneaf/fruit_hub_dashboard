@@ -36,7 +36,7 @@ class DashboardViewBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Fruits Hub Admin Dashboard',
+              'Fruits Hub Dashboard',
               style: AppTextStyles.bold23.copyWith(
                 color: AppColorsManger.primaryColor,
               ),
@@ -50,7 +50,6 @@ class DashboardViewBody extends StatelessWidget {
         IconButton(
           icon: const Icon(Icons.logout, color: Colors.red, size: 28),
           onPressed: () {
-            // TODO: Implement FirebaseAuth.signOut
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(content: Text('Logout functionality TBD')),
             );
@@ -153,7 +152,7 @@ class DashboardViewBody extends StatelessWidget {
           icon: Icons.add_circle,
           color: Colors.green,
           onTap: () {
-            Navigator.pushNamed(context, AppName.addDataView);
+            Navigator.pushNamed(context, AppName.addproductView);
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(content: Text('Add Product screen TBD')),
             );
