@@ -34,7 +34,7 @@ class _IsFeaturedCheckboxState extends State<IsFeaturedCheckbox> {
               style: AppTextStyles.semiBold16.copyWith(
                 color: Color(0xff949D9E),
               ),
-              children: [WidgetSpan(child: SizedBox(width: 4.w))],
+              // children: [WidgetSpan(child: SizedBox(width: 4.w))],
             ),
           ),
         ),
