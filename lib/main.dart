@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub_dashboard/app/app_manager.dart';
 import 'package:fruit_hub_dashboard/app/app_name.dart';
 
@@ -11,10 +12,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      onGenerateRoute: onGenerateRoute,
-      initialRoute: AppName.dashboardView,
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        onGenerateRoute: onGenerateRoute,
+        initialRoute: AppName.dashboardView,
+      ),
     );
   }
 }

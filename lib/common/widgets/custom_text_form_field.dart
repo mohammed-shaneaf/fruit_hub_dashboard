@@ -10,6 +10,7 @@ class CustomTextFormField extends StatelessWidget {
     this.onSaved,
     this.controller,
     this.obscureText = false,
+    this.maxLines,
   });
 
   final TextInputType textInputType;
@@ -18,10 +19,12 @@ class CustomTextFormField extends StatelessWidget {
   final void Function(String?)? onSaved;
   final TextEditingController? controller;
   final bool obscureText;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLines: maxLines,
       obscureText: obscureText,
       controller: controller,
       onSaved: (value) {

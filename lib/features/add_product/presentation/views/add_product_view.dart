@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub_dashboard/common/widgets/build_app_bar.dart';
 import 'package:fruit_hub_dashboard/features/add_product/presentation/views/widgets/add_product_view_body.dart';
 
 class AddProductView extends StatelessWidget {
@@ -6,6 +7,9 @@ class AddProductView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: SafeArea(child: AddProductViewBody()));
+    return Scaffold(
+      appBar: buildAppBar(text: 'Add Product'),
+      body: SafeArea(child: AddProductViewBody()),
+    );
   }
 }
