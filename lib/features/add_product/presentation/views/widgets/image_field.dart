@@ -23,7 +23,6 @@ class _ImageFieldState extends State<ImageField> {
     });
 
     final ImagePicker picker = ImagePicker();
-
     final XFile? image = await picker.pickImage(source: ImageSource.gallery);
 
     selectedImage = File(image!.path);
